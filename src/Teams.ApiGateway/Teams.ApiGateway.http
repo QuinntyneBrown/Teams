@@ -1,0 +1,6 @@
+@Teams.ApiGateway_HostAddress = http://localhost:5155
+
+GET {{Teams.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

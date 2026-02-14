@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Teams.ServiceDefaults\Teams.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\Teams.Services.Chat\Teams.Services.Chat.csproj" />
+    <ProjectReference Include="..\Teams.Services.Meetings\Teams.Services.Meetings.csproj" />
+    <ProjectReference Include="..\Teams.Services.Team\Teams.Services.Team.csproj" />
+    <ProjectReference Include="..\Teams.Services.Notifications\Teams.Services.Notifications.csproj" />
+  </ItemGroup>
+</Project>

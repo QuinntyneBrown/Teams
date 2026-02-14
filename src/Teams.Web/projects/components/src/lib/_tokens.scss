@@ -1,0 +1,31 @@
+:root {
+  // Accent colors
+  --ts-accent-primary: #6366f1;
+  --ts-accent-coral: #ff6b6b;
+  --ts-accent-green: #22c55e;
+  --ts-accent-yellow: #fcd34d;
+
+  // Background colors
+  --ts-bg-page: #ffffff;
+  --ts-bg-card: #f6f7f8;
+  --ts-bg-card-highlight: #fffbeb;
+
+  // Badge backgrounds
+  --ts-badge-coral-bg: #fff1f0;
+  --ts-badge-green-bg: #f0fdf4;
+  --ts-badge-indigo-bg: #eef2ff;
+
+  // Border colors
+  --ts-border-subtle: #f3f4f6;
+  --ts-border-empty: #e5e7eb;
+
+  // Text colors
+  --ts-text-primary: #1a1a1a;
+  --ts-text-secondary: #6b7280;
+  --ts-text-tertiary: #9ca3af;
+  --ts-text-disabled: #d1d5db;
+
+  // Typography
+  --ts-font-heading: 'Bricolage Grotesque', sans-serif;
+  --ts-font-body: 'DM Sans', sans-serif;
+}
