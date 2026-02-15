@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@use '../../components/src/lib/tokens';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--ts-font-body, 'DM Sans', sans-serif);
+  background: var(--ts-bg-page, #ffffff);
+  color: var(--ts-text-primary, #1a1a1a);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

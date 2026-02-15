@@ -104,7 +104,7 @@
                   "id": "Lt7kk",
                   "name": "appTitle",
                   "fill": "$text-primary",
-                  "content": "TeamSync",
+                  "content": "Teams",
                   "fontFamily": "Bricolage Grotesque",
                   "fontSize": 28,
                   "fontWeight": "700"
@@ -11859,7 +11859,7 @@
                   "id": "DzPlx",
                   "name": "logoLabel",
                   "fill": "$text-primary",
-                  "content": "TeamSync",
+                  "content": "Teams",
                   "fontFamily": "Bricolage Grotesque",
                   "fontSize": 20,
                   "fontWeight": "700"
@@ -12197,7 +12197,7 @@
               "id": "2IL7k",
               "name": "tnLogoLabel",
               "fill": "$text-primary",
-              "content": "TeamSync",
+              "content": "Teams",
               "fontFamily": "Bricolage Grotesque",
               "fontSize": 18,
               "fontWeight": "700"

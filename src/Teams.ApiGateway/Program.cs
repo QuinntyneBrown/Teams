@@ -21,6 +21,9 @@ builder.Services.AddTeamsDefaults(builder.Configuration, bus =>
     bus.AddConsumers(NotificationServiceRegistration.GetConsumerTypes());
 });
 
+// -- API Controllers --
+builder.Services.AddControllers();
+
 // -- Microservice registrations (DbContexts, MediatR handlers) --
 builder.Services.AddChatService(builder.Configuration);
 builder.Services.AddMeetingService(builder.Configuration);
@@ -72,13 +75,8 @@ app.MapHub<PresenceHub>("/hubs/presence");
 app.MapHub<MeetingHub>("/hubs/meetings");
 app.MapHub<NotificationHub>("/hubs/notifications");
 
-// -- Map API Endpoints --
-Teams.ApiGateway.Endpoints.AuthEndpoints.Map(app);
-Teams.ApiGateway.Endpoints.ChatEndpoints.Map(app);
-Teams.ApiGateway.Endpoints.MeetingEndpoints.Map(app);
-Teams.ApiGateway.Endpoints.TeamEndpoints.Map(app);
-Teams.ApiGateway.Endpoints.NotificationEndpoints.Map(app);
-Teams.ApiGateway.Endpoints.DashboardEndpoints.Map(app);
+// -- Map API Controllers --
+app.MapControllers();
 
 // -- Seed data in development --
 if (app.Environment.IsDevelopment())
