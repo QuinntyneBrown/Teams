@@ -1,10 +1,10 @@
-# TeamSync
+# Teams
 
-A real-time collaboration platform for distributed teams. TeamSync provides chat, meeting scheduling, team management, and timezone-aware coordination across global workforces.
+A real-time collaboration platform for distributed teams. Teams provides chat, meeting scheduling, team management, and timezone-aware coordination across global workforces.
 
 ## Architecture
 
-TeamSync is built as a .NET 8 microservices backend with an Angular frontend.
+Teams is built as a .NET 8 microservices backend with an Angular frontend.
 
 ```
 Teams.sln
