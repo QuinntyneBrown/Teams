@@ -7,16 +7,16 @@ A real-time collaboration platform for distributed teams. TeamSync provides chat
 TeamSync is built as a .NET 8 microservices backend with an Angular frontend.
 
 ```
-TeamSync.sln
+Teams.sln
 ├── src/
 │   ├── Teams.Web/                          # Angular 21 SPA frontend
-│   ├── TeamSync.ApiGateway/                # API gateway (routes to services)
-│   ├── TeamSync.Services.Chat/             # Chat & channels
-│   ├── TeamSync.Services.Meetings/         # Meeting scheduling
-│   ├── TeamSync.Services.Team/             # Team & member management
-│   ├── TeamSync.Services.Notifications/    # Push/email notifications
-│   ├── TeamSync.Contracts/                 # Shared DTOs & events
-│   └── TeamSync.ServiceDefaults/           # Cross-cutting concerns
+│   ├── Teams.ApiGateway/                   # API gateway (routes to services)
+│   ├── Teams.Services.Chat/               # Chat & channels
+│   ├── Teams.Services.Meetings/           # Meeting scheduling
+│   ├── Teams.Services.Team/               # Team & member management
+│   ├── Teams.Services.Notifications/      # Push/email notifications
+│   ├── Teams.Contracts/                   # Shared DTOs & events
+│   └── Teams.ServiceDefaults/             # Cross-cutting concerns
 ├── tests/                                  # Test projects
 └── designs/
     └── teams.pen                           # UI designs (Pencil format)
@@ -32,11 +32,11 @@ TeamSync.sln
 | **Team Service** | Members, roles, presence/status |
 | **Notifications Service** | Real-time alerts, email digests |
 
-Key libraries: MassTransit (async messaging), MediatR (CQRS), Entity Framework Core + SQLite, JWT authentication, Serilog.
+Key libraries: MassTransit (async messaging), MediatR (CQRS), Entity Framework Core + SQLite, JWT authentication, SignalR (real-time communication), Serilog.
 
 ### Frontend
 
-Angular 21 single-page application. Run from `src/Teams.Web/`.
+Angular 21 single-page application using SignalR for real-time updates. Run from `src/Teams.Web/`.
 
 ### Design
 
@@ -63,7 +63,7 @@ Screens: Home Dashboard, Chat, Meetings, Team Members.
 ```bash
 dotnet restore
 dotnet build
-dotnet run --project src/TeamSync.ApiGateway
+dotnet run --project src/Teams.ApiGateway
 ```
 
 The API gateway starts and hosts all services. Swagger UI is available at `/swagger`.
@@ -93,10 +93,14 @@ npm test
 
 | Path | Description |
 |---|---|
-| `src/TeamSync.ServiceDefaults/` | Shared config: auth, logging, EF Core, MassTransit setup |
-| `src/TeamSync.Contracts/` | Event contracts and DTOs shared across services |
+| `src/Teams.ServiceDefaults/` | Shared config: auth, logging, EF Core, MassTransit setup |
+| `src/Teams.Contracts/` | Event contracts and DTOs shared across services |
 | `src/Teams.Web/projects/` | Angular libraries and app source |
 | `designs/teams.pen` | UI mockups for all breakpoints |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, branch strategy, and code standards.
 
 ## License
 
